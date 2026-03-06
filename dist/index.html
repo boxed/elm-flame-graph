@@ -3,22 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>flames</title>
-    <style>
-        .flame-graph span {
-            background-color: #305830;
-            border-radius: 3px;
-            border: 1px solid transparent;
-        }
-    </style>
   </head>
-
   <body>
     <div id="elm"></div>
-    <script src="app.min.js"></script>
-
-
+    <script src="app.js"></script>
     <script>
-
       fetch("https://brandly.github.io/react-flame-graph/collapsed-perf.txt")
         .then(function(response) { return response.text(); })
         .then(function(data) {
