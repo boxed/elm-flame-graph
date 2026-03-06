@@ -8,9 +8,14 @@
     <div id="elm"></div>
     <script src="app.min.js"></script>
     <script>
-      Elm.Main.init({
-        node: document.getElementById('elm')
-      });
+      fetch("https://brandly.github.io/react-flame-graph/collapsed-perf.txt")
+        .then(function(response) { return response.text(); })
+        .then(function(data) {
+          Elm.Main.init({
+            node: document.getElementById('elm'),
+            flags: data
+          });
+        });
     </script>
   </body>
 </html>
